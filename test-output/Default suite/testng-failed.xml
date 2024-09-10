@@ -9,9 +9,6 @@
           <include name="launchBrowserAndOpenURl"/>
           <include name="endReport"/>
           <include name="ExtentReport"/>
-          <include name="closeBrowser"/>
-          <include name="launchBrowserAndOpen"/>
-          <include name="verifyLoginWithInValidData"/>
           <include name="closeBrowser1"/>
         </methods>
       </class> <!-- testcases.verifyLogintestcases -->

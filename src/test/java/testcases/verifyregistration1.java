@@ -3,8 +3,6 @@ package testcases;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import pageobjectmodel.homepageobject;
@@ -48,8 +46,8 @@ public class verifyregistration1 extends BaseClass {
 	}
 
 	
-	 @Test public void verifyragisterationblankdata() throws IOException,
-	  InterruptedException {
+	 @Test 
+	 public void verifyragisterationblankdata() throws IOException,InterruptedException {
 	  
 	  homepageobject ho = new homepageobject(driver);
 	 

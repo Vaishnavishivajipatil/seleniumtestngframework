@@ -54,18 +54,6 @@ public class BaseClass {
 		}
 	}
 
-	@BeforeMethod
-	public void launchBrowserAndOpen() throws IOException
-
-	{
-		browserLaunch();
-		driver.get(prop.getProperty("url"));
-	}
-
-	@AfterMethod
-	public void closeBrowser() {
-		// driver.quite();
-	}
 
 //   generate random email address UniqueemailAddress
 	public static String uniqemailAddress() {
@@ -108,7 +96,7 @@ public class BaseClass {
 	}
 	@AfterMethod
 	public void closeBrowser1() throws IOException {
-		 driver.quit();
+		 //driver.quit();
 	}
 	
 

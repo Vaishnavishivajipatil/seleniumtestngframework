@@ -1,12 +1,8 @@
 package testcases;
 
 import java.io.IOException;
-import java.time.Duration;
 
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import pageobjectmodel.homepageobject;
 import pageobjectmodel.loginpageobject;
@@ -31,17 +27,19 @@ public class verifyLogintestcases extends BaseClass {
 		lp.enterpassword().sendKeys(Storedata.password);
 		lp.clickonsubmit().click();
 
+		Thread.sleep(3000);
+		
 		String actual = driver.getCurrentUrl();
-		String expected = Storedata.loginExpectedURL;
+		String expected =  "https://naveenautomationlabs.com/opencart/index.php?route=account/account";
 
 		CommanMethods.handleAssertion(actual, expected);
-
+		Thread.sleep(3000);
+		
 		hp.clickOnmyAccount().click();
-
 		lp.ClickOnLogout().click();
 
 		String actualWarningText = lp.getlogoutConfirmationText1().getText();
-		String expectedWarningText = Storedata.logoutExpctedConfirmationText;
+		String expectedWarningText =Storedata.logOutExpectedConfirmationtext;
 
 		CommanMethods.handleAssertion(actualWarningText, expectedWarningText);
 
@@ -65,10 +63,9 @@ public class verifyLogintestcases extends BaseClass {
 		CommanMethods.handleExplictWait(15, lp.waringText(), driver);
 
 		String actual = lp.waringText().getText();
-		String expected = Storedata.loginfailexceptedText;
+		String expected = Storedata.loginFailedExpectedText;
 
 		CommanMethods.handleAssertion(actual, expected);
 
 	}
-
 }
